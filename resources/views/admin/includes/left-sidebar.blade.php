@@ -16,9 +16,9 @@
                 </li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
+                    <a href="{{ route('home.slider') }}" class=" waves-effect">
                         <i class="ri-calendar-2-line"></i>
-                        <span>Calendar</span>
+                        <span>Home Slider</span>
                     </a>
                 </li>
 
@@ -28,8 +28,8 @@
                         <span>Email</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Read Email</a></li>
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="">Read Email</a></li>
                     </ul>
                 </li>
 
