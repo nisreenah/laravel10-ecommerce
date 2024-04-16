@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Home\HomeSliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +24,19 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // visitor
+    Route::get('/home-slider', [HomeSliderController::class, 'show'])->name('home.slider');
+
+    // admin
+    Route::get('/home-slider/{slider}/edit', [HomeSliderController::class, 'edit'])->name('home.slider.edit');
+    Route::patch('/home-slider/{slider}/update', [HomeSliderController::class, 'update'])->name('home.slider.update');
+
 });
+
 
 require __DIR__.'/auth.php';
