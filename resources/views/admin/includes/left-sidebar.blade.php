@@ -16,7 +16,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('home.slider') }}" class=" waves-effect">
+                    <a href="{{ route('sliders.index') }}" class=" waves-effect">
                         <i class="ri-calendar-2-line"></i>
                         <span>Home Slider</span>
                     </a>

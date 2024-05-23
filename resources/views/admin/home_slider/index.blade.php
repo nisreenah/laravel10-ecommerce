@@ -3,7 +3,6 @@
 @section('page-content')
     <div class="page-content">
         <div class="container-fluid">
-
             <!-- start page title -->
 {{--            <div class="row">--}}
 {{--                <div class="col-12">--}}
@@ -38,6 +37,7 @@
                                 <thead>
                                 <tr class="table-info">
                                     <th>ID</th>
+                                    <th>Image</th>
                                     <th>Title</th>
                                     <th>Short title</th>
                                     <th>Updated date</th>
@@ -46,20 +46,28 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($home_sliders as $home_slider)
+                                @foreach($homeSliders as $homeSlider)
                                     <tr>
 
-                                        <td>{{$home_slider->id}}</td>
-                                        <td>{{$home_slider->title}}</td>
-                                        <td>{{$home_slider->short_title}}</td>
-                                        <td>{{$home_slider->updated_at}}</td>
+                                        <td>{{$homeSlider->id}}</td>
+                                        <td>
+
+                                            <img class="rounded me-2" alt="200x200" width="100" data-holder-rendered="true"
+                                                 src="{{ (!$homeSlider->image) ? url('upload/no_image.jpg') : url('upload/home_images/'.$homeSlider->image) }}">
+
+                                        </td>
+                                        <td>{{substr($homeSlider->title, 0, 40)}}</td>
+                                        <td>{{substr($homeSlider->short_title, 0, 20)}}</td>
+                                        <td>{{$homeSlider->updated_at}}</td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="{{route('home.slider.edit',$home_slider->id)}}">
+                                                <a href="{{route('sliders.edit',$homeSlider->id)}}">
                                                     <span class="badge bg-info" style="font-size: 15px"> <i class="fas fa-edit "></i> edit</span>
                                                 </a>
                                             </div>
+
                                         </td>
+
                                     </tr>
                                 @endforeach
                                 </tbody>

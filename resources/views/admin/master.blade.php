@@ -23,16 +23,13 @@
     <link href="{{ asset('backend/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css"/>
 
     <!-- Bootstrap Css -->
-    <link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/backend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css"/>
     <!-- Icons Css -->
-    <link href="{{ asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css"/>
     <!-- App Css-->
-    <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css"/>
-
-{{--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">--}}
+    <link href="{{ asset('/backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css"/>
 
     @yield('styles')
-
 </head>
 
 <body data-topbar="dark">
@@ -79,6 +76,10 @@
 <script src="{{ asset('backend/assets/libs/metismenu/metisMenu.min.js') }}"></script>
 <script src="{{ asset('backend/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('backend/assets/libs/node-waves/waves.min.js') }}"></script>
+
+<script src="{{ asset('backend/assets/libs/parsleyjs/parsley.min.js') }}"></script>
+
+<script src="{{ asset('backend/assets/js/pages/form-validation.init.js') }}"></script>
 
 <!-- Required datatable js -->
 <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
