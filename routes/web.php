@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Home\SliderController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('admin.index');
