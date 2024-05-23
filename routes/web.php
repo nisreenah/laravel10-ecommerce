@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Home\SliderController;
+use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,13 @@ Route::middleware('auth')->group(function () {
         Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
-    Route::resource('sliders', SliderController::class);
+    Route::resource('sliders', SliderController::class)->only([
+        'index', 'edit', 'update'
+    ]);
+
+    Route::resource('about', AboutController::class)->only([
+        'index', 'edit', 'update'
+    ]);
 
 });
 

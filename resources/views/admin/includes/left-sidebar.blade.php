@@ -9,7 +9,7 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
+                    <a href="{{route('dashboard')}}" class="waves-effect">
                         <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
                         <span>Dashboard</span>
                     </a>
@@ -19,6 +19,13 @@
                     <a href="{{ route('sliders.index') }}" class=" waves-effect">
                         <i class="ri-calendar-2-line"></i>
                         <span>Home Slider</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('about.index') }}" class=" waves-effect">
+                        <i class="ri-calendar-2-line"></i>
+                        <span>About Me</span>
                     </a>
                 </li>
 
